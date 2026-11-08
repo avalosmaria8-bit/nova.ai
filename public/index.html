@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nova is a thoughtful general-purpose AI assistant." />
+    <title>Nova — Your thinking partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Conversation navigation">
+        <a href="/" class="brand" aria-label="Nova home"><span class="brand-mark">N</span><span>NOVA</span></a>
+        <button class="new-chat" id="new-chat"><span>+</span> New conversation <kbd>⌘ K</kbd></button>
+        <div class="sidebar-label">Today</div>
+        <nav class="history" id="history" aria-label="Conversation history"></nav>
+        <div class="sidebar-bottom">
+          <button class="sidebar-action" id="theme-toggle"><span id="theme-icon">◐</span> Appearance</button>
+          <button class="profile" id="profile-button"><span class="avatar">M</span><span><strong>My space</strong><small>Personal assistant</small></span><span class="dots">•••</span></button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="mobile-menu" id="menu-toggle" aria-label="Open conversations">☰</button>
+          <div><span class="eyebrow">PERSONAL AI</span><h1 id="conversation-title">New conversation</h1></div>
+          <div class="mode-indicator" id="mode-indicator"><span></span> Checking connection</div>
+        </header>
+
+        <section class="chat" id="chat" aria-live="polite">
+          <div class="welcome" id="welcome">
+            <div class="orb"><i></i><i></i><i></i></div>
+            <p class="eyebrow">WELCOME TO NOVA</p>
+            <h2>A clearer way<br />to <em>think</em> things through.</h2>
+            <p class="welcome-copy">I’m here to help you make sense of ideas, get unstuck, and move work forward.</p>
+            <div class="prompt-grid">
+              <button class="prompt-card" data-prompt="Help me make a plan for a project I keep putting off."><span>✦</span><b>Make a plan</b><small>Turn a messy goal into next steps</small></button>
+              <button class="prompt-card" data-prompt="Help me write a clear, friendly email."><span>↗</span><b>Write something</b><small>Find the right words and tone</small></button>
+              <button class="prompt-card" data-prompt="Explain a difficult topic simply, then quiz me on it."><span>◌</span><b>Learn together</b><small>Understand it, not just memorize it</small></button>
+              <button class="prompt-card" data-prompt="I need fresh ideas. Help me brainstorm without judging them too early."><span>⌁</span><b>Explore ideas</b><small>See a problem from a new angle</small></button>
+            </div>
+          </div>
+          <div class="messages" id="messages"></div>
+        </section>
+
+        <footer class="composer-area">
+          <form class="composer" id="composer">
+            <textarea id="message-input" rows="1" placeholder="What’s on your mind?" aria-label="Message Nova"></textarea>
+            <div class="composer-tools"><button type="button" class="tool-button" id="attach" aria-label="Attach a file" title="File uploads are coming soon">+</button><span>Nova keeps your conversations private.</span><button type="submit" class="send" id="send" aria-label="Send message">↑</button></div>
+          </form>
+          <p class="disclaimer">Nova can make mistakes. Check important information.</p>
+        </footer>
+      </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
