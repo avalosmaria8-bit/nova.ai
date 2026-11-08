@@ -1,0 +1,14 @@
+{
+  "name": "nova-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A privacy-conscious, general-purpose AI assistant.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
