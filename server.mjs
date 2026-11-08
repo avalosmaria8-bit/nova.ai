@@ -92,7 +92,7 @@ async function handleChat(req, res) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: process.env.OPENAI_MODEL || "gpt-6-astra",
+        model: process.env.OPENAI_MODEL || "gpt-6-luna",
         instructions: systemInstructions,
         input: cleanMessages,
       }),
